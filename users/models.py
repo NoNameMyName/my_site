@@ -10,6 +10,6 @@ class User(AbstractUser):
     zip_code = models.CharField(("zip code"), max_length=5, default="49000", validators=[RegexValidator(
         regex=r"^\d{5}$")]
     )
-    phone = models.CharField(("phone number"), max_length=5, default="+380xxxxxxxxx", validators=[RegexValidator(
+    phone = models.CharField(("phone number"), max_length=13, default="+380xxxxxxxxx", validators=[RegexValidator(
         regex=r"^[+]\d{10,12}$")]
     )
