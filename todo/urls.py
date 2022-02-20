@@ -4,6 +4,6 @@ from .views import TodoViewSet
 
 
 router = routers.DefaultRouter()
-router.register(prefix = 'api/v1/todo', viewset = TodoViewSet, basename = 'todo')
+router.register(prefix='api/v1/todo', viewset=TodoViewSet, basename='todo')
 
 urlpatterns = router.urls
