@@ -1,7 +1,9 @@
-from django.urls import path
+from rest_framework import routers
 
-from . import views
+from .views import TodoViewSet
 
-urlpatterns = [
-    path('', views.index, name='index'),
-]
+
+router = routers.DefaultRouter()
+router.register(prefix='api/v1/users', viewset=TodoViewSet, basename='users')
+
+urlpatterns = router.urls
